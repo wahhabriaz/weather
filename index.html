@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Document</title>
+    <style type="text/css">
+      /* Chart.js */
+      @keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .chartjs-render-monitor {
+        animation: chartjs-render-animation 1ms;
+      }
+      .chartjs-size-monitor,
+      .chartjs-size-monitor-expand,
+      .chartjs-size-monitor-shrink {
+        position: absolute;
+        direction: ltr;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        pointer-events: none;
+        visibility: hidden;
+        z-index: -1;
+      }
+      .chartjs-size-monitor-expand > div {
+        position: absolute;
+        width: 1000000px;
+        height: 1000000px;
+        left: 0;
+        top: 0;
+      }
+      .chartjs-size-monitor-shrink > div {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        left: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <------table------->
+
+    <div
+      class="section-wrap mobile-e wahab"
+      itemscope=""
+      itemtype="http://schema.org/Table"
+    >
+      <h2 class="section-header" itemprop="about">
+        14 tage wettervorhersage Schweiz
+      </h2>
+      <div class="section-content">
+        <table class="table fourteen-table" id="fourteen-table">
+          <thead>
+            <tr>
+              <th class="left-align">Datum</th>
+              <th>Temperaturen</th>
+              <th class="image-column hide">Wetter</th>
+              <th class="hide"></th>
+              <th class="hide">Wind</th>
+              <th class="hide"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=today"
+                  class="link-button"
+                  >Donnerstag, 10. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="27">27</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="11">11</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="sonnig"
+                  title="sonnig"
+                  class=""
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                />
+              </td>
+              <td class="hide left-align">sonnig</td>
+              <td class="hide">
+                <span data-wind="3">3</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=today"
+                  title="Donnerstag Aug 10"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=tomorrow"
+                  class="link-button"
+                  >Freitag, 11. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="30">30</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="13">13</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="sonnig"
+                  title="sonnig"
+                  class=""
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                />
+              </td>
+              <td class="hide left-align">sonnig</td>
+              <td class="hide">
+                <span data-wind="2">2</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=tomorrow"
+                  title="Freitag Aug 11"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-12"
+                  class="link-button"
+                  >Samstag, 12. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="32">32</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="17">17</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="sonnig"
+                  title="sonnig"
+                  class=""
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                />
+              </td>
+              <td class="hide left-align">sonnig</td>
+              <td class="hide">
+                <span data-wind="2">2</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-12"
+                  title="Samstag Aug 12"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-13"
+                  class="link-button"
+                  >Sonntag, 13. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="30">30</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="16">16</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="sonnig"
+                  title="sonnig"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                />
+              </td>
+              <td class="hide left-align">sonnig</td>
+              <td class="hide">
+                <span data-wind="3">3</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-13"
+                  title="Sonntag Aug 13"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-14"
+                  class="link-button"
+                  >Montag, 14. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="31">31</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="17">17</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="sonnig"
+                  title="sonnig"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                />
+              </td>
+              <td class="hide left-align">sonnig</td>
+              <td class="hide">
+                <span data-wind="3">3</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-14"
+                  title="Montag Aug 14"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-15"
+                  class="link-button"
+                  >Dienstag, 15. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="30">30</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="16">16</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="sonnig"
+                  title="sonnig"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                />
+              </td>
+              <td class="hide left-align">sonnig</td>
+              <td class="hide">
+                <span data-wind="4">4</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-15"
+                  title="Dienstag Aug 15"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-16"
+                  class="link-button"
+                  >Mittwoch, 16. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="30">30</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="15">15</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="stellenweise Regenfall"
+                  title="stellenweise Regenfall"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/rain-interval-2.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/rain-interval-2.svg"
+                />
+              </td>
+              <td class="hide left-align">stellenweise Regenfall</td>
+              <td class="hide">
+                <span data-wind="3">3</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-16"
+                  title="Mittwoch Aug 16"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-17"
+                  class="link-button"
+                  >Donnerstag, 17. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="29">29</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="16">16</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="stellenweise Regenfall"
+                  title="stellenweise Regenfall"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/rain-interval-2.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/rain-interval-2.svg"
+                />
+              </td>
+              <td class="hide left-align">stellenweise Regenfall</td>
+              <td class="hide">
+                <span data-wind="3">3</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-17"
+                  title="Donnerstag Aug 17"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-18"
+                  class="link-button"
+                  >Freitag, 18. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="28">28</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="15">15</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="leichter Nebel"
+                  title="leichter Nebel"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/mist.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/mist.svg"
+                />
+              </td>
+              <td class="hide left-align">leichter Nebel</td>
+              <td class="hide">
+                <span data-wind="5">5</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-18"
+                  title="Freitag Aug 18"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-19"
+                  class="link-button"
+                  >Samstag, 19. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="30">30</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="15">15</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="leichter Nebel"
+                  title="leichter Nebel"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/mist.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/mist.svg"
+                />
+              </td>
+              <td class="hide left-align">leichter Nebel</td>
+              <td class="hide">
+                <span data-wind="4">4</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-19"
+                  title="Samstag Aug 19"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-20"
+                  class="link-button"
+                  >Sonntag, 20. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="32">32</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="17">17</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="sonnig"
+                  title="sonnig"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                />
+              </td>
+              <td class="hide left-align">sonnig</td>
+              <td class="hide">
+                <span data-wind="2">2</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-20"
+                  title="Sonntag Aug 20"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-21"
+                  class="link-button"
+                  >Montag, 21. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="29">29</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="17">17</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="mäßige bis starke Regenschauer"
+                  title="mäßige bis starke Regenschauer"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/rain-3.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/rain-3.svg"
+                />
+              </td>
+              <td class="hide left-align">mäßige bis starke Regenschauer</td>
+              <td class="hide">
+                <span data-wind="5">5</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-21"
+                  title="Montag Aug 21"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-22"
+                  class="link-button"
+                  >Dienstag, 22. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="30">30</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="16">16</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="sonnig"
+                  title="sonnig"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                />
+              </td>
+              <td class="hide left-align">sonnig</td>
+              <td class="hide">
+                <span data-wind="4">4</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-22"
+                  title="Dienstag Aug 22"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="left-align">
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-23"
+                  class="link-button"
+                  >Mittwoch, 23. august</a
+                >
+              </td>
+              <td>
+                <span class="day-max-temp">
+                  <span data-temp="29">29</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+                <span class="day-min-temp"
+                  >/ <span data-temp="17">17</span
+                  ><span class="degree_sign"> °</span>
+                </span>
+              </td>
+              <td class="image-column fourteen-table-image-wrap">
+                <img
+                  width="36"
+                  height="36"
+                  alt="sonnig"
+                  title="sonnig"
+                  class="lazy"
+                  data-src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                  src="https://res.wetter2.com/images/weather_icons/new/day/sunny.svg"
+                />
+              </td>
+              <td class="hide left-align">sonnig</td>
+              <td class="hide">
+                <span data-wind="8">8</span>
+                <span class="wind_unit">Km/h</span>
+              </td>
+              <td>
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-23"
+                  title="Mittwoch Aug 23"
+                >
+                  <button class="arrow-button" aria-label="Mehr Details">
+                    <span></span>
+                  </button>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ..accordion.... -->
+    <div
+      class="section-wrap-with-background faq-wrap section-wrap foreteen-faq"
+    >
+      <div
+        class="inner-section-wrap"
+        itemscope=""
+        itemtype="https://schema.org/FAQPage"
+      >
+        <h2 class="section-header">
+          Das Wetter in Schweiz der nächsten 14 Tagen - FAQ
+        </h2>
+        <div class="section-content">
+          <div
+            class="question-wrap temp-question"
+            itemscope=""
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question"
+          >
+            <div class="question temp-question" itemprop="name">
+              Wie werden die Temperaturen der nächsten 14 Tage sein in Schweiz?
+            </div>
+            <div
+              class="answer"
+              id="answer1"
+              itemscope=""
+              itemprop="acceptedAnswer"
+              itemtype="https://schema.org/Answer"
+              style="display: none"
+            >
+              <span itemprop="text">
+                Die Temperaturen werden zwischen
+                <b
+                  ><span data-temp="32">32</span>°
+                  <span class="temp_unit">C</span> und
+                  <span data-temp="27">27</span>°
+                  <span class="temp_unit">C</span></b
+                >
+                betragen. Der heißeste Tag in den nächsten zwei Wochen wird der
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=day#date=2023-08-12"
+                  >12. August</a
+                >
+                und der kälteste der
+                <a href="https://www.wetter2.com/europe/switzerland?page=today"
+                  >10. August</a
+                >.
+              </span>
+            </div>
+          </div>
+          <div
+            class="question-wrap rain-question"
+            itemscope=""
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question"
+          >
+            <div class="question" itemprop="name">
+              Wird es in den nächsten 14 Tagen regnen in Schweiz?
+            </div>
+            <div
+              class="answer"
+              id="answer2"
+              itemscope=""
+              itemprop="acceptedAnswer"
+              itemtype="https://schema.org/Answer"
+            >
+              <span itemprop="text"
+                >Ja, es wird an 9 Tagen Regen erwartet mit einer gesamten
+                Niederschlagsmenge von 20,8 mm.</span
+              >
+            </div>
+          </div>
+          <div
+            class="question-wrap question-mark-question"
+            itemscope=""
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question"
+          >
+            <div class="question" itemprop="name">
+              Kann ich mehr Informationen über das Wetter eines spezifischen
+              Tages in Schweiz sehen?
+            </div>
+            <div
+              class="answer"
+              id="answer3"
+              itemscope=""
+              itemprop="acceptedAnswer"
+              itemtype="https://schema.org/Answer"
+            >
+              <span itemprop="text"
+                >Ja, Sie können jeden Tag in der Galerie oben auswählen, oder
+                das Wetter
+                <a href="https://www.wetter2.com/europe/switzerland?page=today"
+                  >heute</a
+                >
+                und
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=tomorrow"
+                  >morgen</a
+                >
+                auf der Schweiz Seite überprüfen.</span
+              >
+            </div>
+          </div>
+          <div
+            class="question-wrap long-question"
+            itemscope=""
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question"
+          >
+            <div class="question" itemprop="name">
+              Gibt es eine Wettervorhersage für Schweiz für
+              <strong>mehr</strong> als 14 Tage?
+            </div>
+            <div
+              class="answer"
+              id="answer4"
+              itemscope=""
+              itemprop="acceptedAnswer"
+              itemtype="https://schema.org/Answer"
+            >
+              <span itemprop="text"
+                >Sie können sich auf der Seite
+                <a
+                  href="https://www.wetter2.com/europe/switzerland?page=long-range"
+                  >Langzeitprognose für Schweiz</a
+                >
+                über das Wetter der letzten Jahre zu einem spezifischen Zeitraum
+                erkundigen, um ein gutes Gefühl für das übliche Wetter zu
+                bekommen.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ..box.... -->
+    <div class="section-wrap month-text-wrap past-weather_page" id="day-text">
+      <h1 class="section-header">Das Wetter in Schweiz heute</h1>
+      <div class="section-sub-header">Donnerstag, 10. August 2023</div>
+      <div class="text-and-bubbles section-content">
+        <div class="text-wrap today-text">
+          <p>
+            Heute wird das Wetter in Schweiz heiß mit Temperaturen die
+            <span data-temp="27">27</span>°<span class="temp_unit">C</span>
+            erreichen. In der Nacht werden die Temperaturen auf
+            <span data-temp="11">11</span>°<span class="temp_unit">C</span>
+            fallen.
+          </p>
+          <p>
+            Sehr detaillierte Informationen für das Wetter von heute finden Sie
+            in unserer
+            <a href="#intervals-1">stündlichen Wettervorhersage</a> unten auf
+            der Seite.
+          </p>
+        </div>
+        <div class="month-bubbles past-bubbles" id="past-bubbles">
+          <div class="month_data_line">
+            <div class="month_data_icon">
+              <img
+                width="24"
+                height="24"
+                alt="Temperatur"
+                title="Temperatur"
+                class=""
+                data-src="https://res.wetter2.com/images/icons/month/temperatures.svg"
+                src="https://res.wetter2.com/images/icons/month/temperatures.svg"
+              />
+            </div>
+            <div class="month-data-text">
+              <div class="month_data_text">Temperatur</div>
+              <div class="month_data_value" id="month_temps">
+                <span
+                  class="month_min bubble-degree month_data_to_animate"
+                  data-temp="27"
+                  id="min-temp"
+                  >27</span
+                >° <span class="degree-separator">/</span>
+                <span
+                  class="month_max bubble-degree month_data_to_animate"
+                  data-temp="11"
+                  id="max-temp"
+                  >11</span
+                >°
+              </div>
+            </div>
+          </div>
+          <div class="month_data_line">
+            <div class="month_data_icon">
+              <img
+                width="24"
+                height="24"
+                alt="Regen"
+                title="Regen"
+                class=""
+                data-src="https://res.wetter2.com/images/icons/month/rain.svg"
+                src="https://res.wetter2.com/images/icons/month/rain.svg"
+              />
+            </div>
+            <div class="month-data-text">
+              <div class="month_data_text">Regen</div>
+              <div class="month_data_value">
+                <div class="month_data_to_animate" id="bubble-rain">0</div>
+                <div class="month_data_units">%</div>
+              </div>
+            </div>
+          </div>
+          <div class="month_data_line">
+            <div class="month_data_icon">
+              <img
+                width="24"
+                height="24"
+                alt="Wind"
+                title="Wind"
+                class=""
+                data-src="https://res.wetter2.com/images/icons/month/wind.svg"
+                src="https://res.wetter2.com/images/icons/month/wind.svg"
+              />
+            </div>
+            <div class="month-data-text">
+              <div class="month_data_text">Wind</div>
+              <div class="month_data_value">
+                <div
+                  class="month_data_to_animate"
+                  id="bubble-wind"
+                  data-wind="5"
+                >
+                  5
+                </div>
+                <div class="month_data_units wind_unit mm_unit">Km/h</div>
+              </div>
+            </div>
+          </div>
+          <div class="month_data_line">
+            <div class="month_data_icon">
+              <img
+                width="24"
+                height="24"
+                alt="Feuchtigkeit"
+                title="Feuchtigkeit"
+                class=""
+                data-src="https://res.wetter2.com/images/icons/month/humidity.svg"
+                src="https://res.wetter2.com/images/icons/month/humidity.svg"
+              />
+            </div>
+            <div class="month-data-text">
+              <div class="month_data_text">Feuchtigkeit</div>
+              <div class="month_data_value">
+                <div class="month_data_to_animate" id="bubble-humidity">95</div>
+                <div class="month_data_units">%</div>
+              </div>
+            </div>
+          </div>
+          <div class="vertical-border"></div>
+          <div class="horizontal-border"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ....chart.. -->
+    <div class="section-wrap mobile-e">
+      <h2 class="section-header" id="fourteen-days-graph">
+        Schweiz 14 Tage – Wettergrafik
+      </h2>
+      <div class="section-content canvas-wrap no_data">
+        <div class="canvas-inner-wrap">
+          <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand"><div class=""></div></div>
+            <div class="chartjs-size-monitor-shrink"><div class=""></div></div>
+          </div>
+
+          <!-- <canvas
+            id="myChart"
+            class="fourteen-chart chartjs-render-monitor"
+            width="1120"
+            height="600"
+            style="display: block; width: 960px; height: 300px"
+          ></canvas> -->
+
+          <canvas
+            id="myChart1"
+            class="fourteen-chart chartjs-render-monitor"
+            width="1920"
+            height="600"
+            style="display: block; width: 960px; height: 300px"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="section-wrap mobile-e">
+      <h2 class="section-header" id="fourteen-days-graph">
+        Schweiz 14 Tage – Wettergrafik
+      </h2>
+      <div class="section-content canvas-wrap no_data">
+        <div class="canvas-inner-wrap">
+          <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand"><div class=""></div></div>
+            <div class="chartjs-size-monitor-shrink"><div class=""></div></div>
+          </div>
+
+          <!-- <canvas
+            id="myChart"
+            class="fourteen-chart chartjs-render-monitor"
+            width="1120"
+            height="600"
+            style="display: block; width: 960px; height: 300px"
+          ></canvas> -->
+
+          <canvas
+            id="myChart2"
+            class="fourteen-chart chartjs-render-monitor"
+            width="1920"
+            height="600"
+            style="display: block; width: 960px; height: 300px"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+    <!-- three colimn box -->
+    <div class="section-wrap today-component today-component-desktop">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+      <div class="day-component-section header_section">
+        <h2>Das heutige Wetter in Schweiz</h2>
+        <a
+          href="https://www.wetter2.com/europe/switzerland?page=today"
+          title="Wetter nach Stunde"
+          ><button class="button_one general_button button-with-tight-arrow">
+            <span>Wetter nach Stunde</span>
+          </button></a
+        >
+      </div>
+      <div class="day-component-section current_temp">
+        <div class="city_temp_wrap">
+          <div class="city_current_temp">
+            <span
+              class="temp_placeholder"
+              id="main_temp_placeholder"
+              data-temp="23"
+              >23</span
+            >°
+          </div>
+          <div class="temp_unit_display temp_unit_display_C active temp_unit">
+            C
+          </div>
+        </div>
+        <div class="sunrise_wrap">
+          <div class="sunrise_line">
+            <span class="sunrise_label">Sonnenaufgang: </span
+            ><span id="sunrise_placeholder">06:16</span>
+          </div>
+          <div class="sunrise_line">
+            <span class="sunrise_label">Sonnenuntergang: </span
+            ><span id="sunset_placeholder">20:45</span>
+          </div>
+        </div>
+      </div>
+      <div class="day-component-section img_section">
+        <div id="img_placeholder">
+          <img
+            class=""
+            data-src="https://res.wetter2.com/images/weather_icons/new/day/mist.svg"
+            alt="leichter Nebel"
+            title="leichter Nebel"
+            width="90"
+            height="90"
+            src="https://res.wetter2.com/images/weather_icons/new/day/mist.svg"
+          />
+        </div>
+        <div id="des_placeholder" class="description-placeholder">
+          leichter Nebel
+        </div>
+      </div>
+      <div class="day-component-section params_section">
+        <div class="param_wrap">
+          <div class="param_img">
+            <img
+              width="30"
+              height="20"
+              class="icon wind_icon"
+              title="Wind Schweiz"
+              alt="Wind Schweiz"
+              data-src="https://res.wetter2.com/images/icons/wind_blue_new.svg"
+              src="https://res.wetter2.com/images/icons/wind_blue_new.svg"
+            />
+          </div>
+          <div>
+            <span class="param_value" id="wind_placeholder" data-wind="6"
+              >6</span
+            ><span class="param_unit wind_unit">Km/h</span>
+          </div>
+        </div>
+        <div class="param_wrap middle_param">
+          <div class="param_img">
+            <img
+              class="rain_icon"
+              width="23"
+              height="25"
+              alt="Regen"
+              title="Regen"
+              data-src="https://res.wetter2.com/images/icons/chance_for_rain_blue_new.svg"
+              src="https://res.wetter2.com/images/icons/chance_for_rain_blue_new.svg"
+            />
+          </div>
+          <div>
+            <span class="param_value" id="chance_for_rain_placeholder">0</span
+            ><span class="param_unit">%</span>
+          </div>
+        </div>
+        <div class="param_wrap">
+          <div class="param_img">
+            <img
+              class="icon humidity_icon"
+              width="20"
+              height="23"
+              title=" Feuchtigkeit Schweiz"
+              alt="Feuchtigkeit Schweiz"
+              data-src="https://res.wetter2.com/images/icons/humidity_blue_new.svg"
+              src="https://res.wetter2.com/images/icons/humidity_blue_new.svg"
+            />
+          </div>
+          <div>
+            <span class="param_value" id="humidity_placeholder">73</span
+            ><span class="param_unit">%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- .... -->
+    <div class="travel-links-section section-wrap">
+      <h2 class="section-header">Urlaub in Schweiz</h2>
+      <div class="section-sub-header"></div>
+      <div class="section-content">
+        <div class="links_gallery_wrap">
+          <a href="https://www.wetter2.com/europe/switzerland?page=flights">
+            <div class="gallery_item_wrap flights">
+              <div class="gallery_item_image_wrap">
+                <img
+                  class=""
+                  src="https://res.wetter2.com/images/illustrations/flight.png"
+                  width="331"
+                  height="174"
+                  data-src="https://res.wetter2.com/images/illustrations/flight.png"
+                  alt="Flüge nach Schweiz"
+                  title="Flüge nach Schweiz"
+                />
+              </div>
+              <div class="gallery-item-name-and-arrow">
+                <div class="gallery-item-name">Flüge nach Schweiz</div>
+                <div class="gallery-item-arrow"></div>
+              </div>
+            </div> </a
+          ><a href="https://www.wetter2.com/europe/switzerland?page=hotels">
+            <div class="gallery_item_wrap hotels">
+              <div class="gallery_item_image_wrap">
+                <img
+                  class=""
+                  src="https://res.wetter2.com/images/illustrations/hotel.png"
+                  width="331"
+                  height="174"
+                  data-src="https://res.wetter2.com/images/illustrations/hotel.png"
+                  alt="Hotels in Schweiz"
+                  title="Hotels in Schweiz"
+                />
+              </div>
+              <div class="gallery-item-name-and-arrow">
+                <div class="gallery-item-name">Hotels in Schweiz</div>
+                <div class="gallery-item-arrow"></div>
+              </div>
+            </div> </a
+          ><a href="https://www.wetter2.com/europe/switzerland?page=car-rental">
+            <div class="gallery_item_wrap car-rental">
+              <div class="gallery_item_image_wrap">
+                <img
+                  class=""
+                  src="https://res.wetter2.com/images/illustrations/car.png"
+                  width="331"
+                  height="174"
+                  data-src="https://res.wetter2.com/images/illustrations/car.png"
+                  alt="Mit dem Auto durch Schweiz"
+                  title="Mit dem Auto durch Schweiz"
+                />
+              </div>
+              <div class="gallery-item-name-and-arrow">
+                <div class="gallery-item-name">Mit dem Auto durch Schweiz</div>
+                <div class="gallery-item-arrow"></div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+    ></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx1 = document.getElementById("myChart1");
+
+      new Chart(ctx1, {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Marz",
+            "Apr",
+            "Mai",
+            "Juni",
+            "Juli",
+            "Aug",
+            "Sep",
+            "Okt",
+            "Nov",
+            "Dez",
+          ],
+          datasets: [
+            {
+              label: "Max Temp",
+              data: [3, 4, 8, 14, 17, 21, 23, 23, 19, 14, 9, 4],
+              borderColor: "#a0ddff",
+              pointBackgroundColor: "#005eff",
+              pointBorderColor: "#005eff",
+              pointHoverBackgroundColor: "#005eff",
+              pointHoverBorderColor: "#fff",
+              pointRadius: 3,
+              pointHoverRadius: 3,
+              fill: false,
+            },
+          ],
+          // datasets: [
+          //   {
+          //     label: "# of Votes",
+          //     data: [12, 19, 3, 5, 2, 3],
+          //     borderWidth: 1,
+          //   },
+          // ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: 5,
+                padding: 10,
+                callback: function (value) {
+                  return value + "°C";
+                },
+              },
+              bounds: "ticks",
+            },
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  var label = context.dataset.label || "";
+                  if (label) {
+                    label += ": ";
+                  }
+                  if (context.parsed.y !== null) {
+                    label += context.parsed.y + " °C";
+                  }
+                  return label;
+                },
+              },
+            },
+          },
+        },
+      });
+      var ctx = document.getElementById("myChart2").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Marz",
+            "Apr",
+            "Mai",
+            "Juni",
+            "Juli",
+            "Aug",
+            "Sep",
+            "Okt",
+            "Nov",
+            "Dez",
+          ],
+          datasets: [
+            {
+              label: "Rain",
+              data: [3, 4, 8, 14, 17, 21, 23, 23, 19, 14, 9, 4],
+              backgroundColor: ["rgba(54, 162, 235, 0.2)"],
+              borderColor: ["rgba(54, 162, 235, 1)"],
+              borderWidth: 1,
+              borderRadius: 8,
+            },
+          ],
+        },
+        // options: {
+        //   scales: {
+        //     y: {
+        //       beginAtZero: true,
+        //       ticks: {
+        //         stepSize: 5,
+        //         padding: 10,
+        //         callback: function (value) {
+        //           return value + " mm";
+        //         },
+        //       },
+        //       bounds: "ticks",
+        //     },
+        //   },
+        // },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: 5,
+                padding: 10,
+                callback: function (value) {
+                  return value + " mm";
+                },
+              },
+              bounds: "ticks",
+            },
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  var label = context.dataset.label || "";
+                  if (label) {
+                    label += ": ";
+                  }
+                  if (context.parsed.y !== null) {
+                    label += context.parsed.y + " mm";
+                  }
+                  return label;
+                },
+              },
+            },
+          },
+        },
+      });
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+    ></script>
+  </body>
+</html>

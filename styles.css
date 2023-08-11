@@ -1,0 +1,742 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  color: #141f2a;
+}
+div {
+  display: block;
+}
+.section-wrap {
+  margin: 72px auto 0;
+  max-width: 960px;
+}
+.section-header {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+.section-content {
+  margin-top: 28px;
+}
+.table {
+  padding: 24px 24px 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(16, 47, 96, 0.08);
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+table {
+  border-spacing: 0;
+}
+table {
+  display: table;
+  border-collapse: separate;
+
+  text-indent: initial;
+  /* border-spacing: 2px;
+  border-color: gray; */
+}
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+.left-align,
+.subheader,
+.table .left-align {
+  text-align: left;
+}
+.table th {
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 18px;
+}
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  /* font-weight: bold;
+    text-align: -internal-center; */
+}
+.image-column {
+  min-width: 128px;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+left-align,
+.subheader,
+.table .left-align {
+  text-align: left;
+}
+.link-button {
+  color: #005eff;
+  display: inline-block;
+  position: relative;
+}
+.day-max-temp {
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 15px;
+}
+.day-max-temp {
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 15px;
+}
+.day-min-temp {
+  color: #6e6e6e;
+  letter-spacing: -1px;
+  font-size: 11px;
+}
+.fourteen-table-image-wrap {
+  width: 40px;
+  margin: 0 auto;
+  max-height: 40px;
+  max-width: 40px;
+  overflow: hidden;
+}
+.fourteen-table-image-wrap img {
+  max-width: 36px;
+  max-height: 36px;
+  width: 36px;
+  height: 36px;
+}
+img {
+  vertical-align: middle;
+}
+.table .wind_unit {
+  font-size: 12px;
+  margin-left: 2px;
+}
+.table td {
+  border-top: 1px solid #e0e0e0;
+  height: 60px;
+  font-size: 16px;
+  min-width: 94px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.arrow-button {
+  background: #f1f7ff;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+.arrow-button span {
+  width: 8px;
+  height: 8px;
+  transform: rotate(-45deg);
+  border-right: solid 2px #005eff;
+  border-bottom: solid 2px #005eff;
+  margin-left: 11px;
+  border-left: 0;
+  border-top: 0;
+  display: block;
+}
+button {
+  background: 0 0;
+  color: inherit;
+  font-size: inherit;
+}
+button {
+  cursor: pointer;
+}
+.hide {
+  text-align: center;
+}
+image-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table td {
+  text-align: center;
+}
+button {
+  border: 0;
+  outline: 0;
+}
+
+@media (max-width: 550px) .section-wrap .mobile-e {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+@media (max-width: 330px) .section-wrap {
+  margin: 56px 4% 0;
+}
+@media (max-width: 992px) .section-wrap {
+  margin: 56px 6% 0;
+}
+@media (max-width: 550px) .hide {
+  display: none;
+}
+@media (max-width: 550px) .table {
+  padding: 24px 14px 0;
+}
+/* <------------------> */
+@media (max-width: 1280px) .section-wrap .section-wrap-with-background {
+  padding: 32px 6%;
+  margin: 40px 0 0;
+}
+
+.section-wrap.section-wrap-with-background {
+  max-width: 100%;
+  padding: 64px 60px;
+}
+.faq-wrap {
+  background-color: #f7f9fc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.section-wrap {
+  margin: 72px auto 0;
+  max-width: 960px;
+}
+@media (max-width: 1280px) .inner-section-wrap {
+  width: 100%;
+}
+.inner-section-wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+.section-header {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+.section-content {
+  margin-top: 28px;
+}
+.question-wrap {
+  box-shadow: 0 2px 24px 0 rgba(63, 63, 63, 0.1);
+  margin-bottom: 20px;
+  line-height: 25px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 16px;
+}
+.temp-question .question.close {
+  background-image: url(https://res.wetter2.com/images/icons/faq/temp.webp),
+    url(https://res.wetter2.com/images/icons/up-arrow.svg);
+}
+.temp-question .question {
+  background-image: url(https://res.wetter2.com/images/icons/faq/temp.webp),
+    url(https://res.wetter2.com/images/icons/down-arrow.svg);
+}
+.question.close {
+  background-image: url(https://res.wetter2.com/images/icons/up-arrow.svg);
+}
+.question {
+  font-weight: 600;
+  background-image: url(https://res.wetter2.com/images/icons/down-arrow.svg);
+  background-repeat: no-repeat;
+  padding-right: 24px;
+  cursor: pointer;
+  background-size: 30px, 16px;
+  padding-left: 40px;
+  background-position: 0 0, right 6px top 7px;
+  min-height: 32px;
+}
+.rain-question .question {
+  background-image: url(https://res.wetter2.com/images/icons/faq/rain.webp),
+    url(https://res.wetter2.com/images/icons/down-arrow.svg);
+}
+.answer {
+  line-height: 28px;
+  margin-top: 12px;
+  border-top: solid 1px #ddeaff;
+  padding-top: 12px;
+  display: none;
+  margin-left: 40px;
+}
+.question-mark-question .question {
+  background-image: url(https://res.wetter2.com/images/icons/faq/question-mark.svg),
+    url(https://res.wetter2.com/images/icons/down-arrow.svg);
+}
+.long-question .question {
+  background-image: url(https://res.wetter2.com/images/icons/faq/long.svg),
+    url(https://res.wetter2.com/images/icons/down-arrow.svg);
+}
+@media (max-width: 1280px) .inner-section-wrap {
+  width: 100%;
+}
+@media (max-width: 992px) .section-wrap.section-wrap-with-background {
+  margin-top: 56px;
+}
+/* ..... */
+.section-header {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+}
+@media (max-width: 550px) .section-wrap.mobile-e .section-header,
+  .section-wrap.mobile-e .section-sub-header {
+  margin-left: 3%;
+}
+.canvas-wrap {
+  overflow: hidden;
+}
+.section-content {
+  margin-top: 28px;
+}
+@media (max-width: 550px) .canvas-wrap {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+.canvas-inner-wrap {
+  position: relative;
+}
+
+element.style {
+}
+@media (max-width: 550px) .canvas-inner-wrap {
+  width: 600px;
+  max-height: 300px;
+}
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+  position: absolute;
+  direction: ltr;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: -1;
+}
+.chartjs-render-monitor {
+  animation: chartjs-render-animation 1ms;
+}
+.fourteen-chart {
+  width: 100%;
+  height: 350px;
+}
+/* .... */
+.month-text-wrap {
+  background: #f7f9fc;
+  border-radius: 16px;
+  padding: 40px;
+}
+@media (max-width: 960px) {
+  .wahab {
+    width: 85vw;
+  }
+  .wahab table {
+    width: 100%;
+  }
+}
+@media (max-width: 690px) {
+  .wahab .hide {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  /* .wahab {
+    max-width: 550px;
+  } */
+  .wahab {
+    /* margin-right: -80px; */
+  }
+}
+.today-component-desktop {
+  background: url(https://res.wetter2.com/images/day-component-desktop.png);
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: end;
+  border-radius: 10px;
+  text-align: center;
+}
+.spinner {
+  display: none;
+  margin: 100px auto 0 -35px;
+  width: 70px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  text-align: center;
+}
+@media (max-width: 660px) .spinner {
+  left: 75%;
+}
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+.today-component-desktop {
+  background: url(https://res.wetter2.com/images/day-component-desktop.png);
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: end;
+  border-radius: 10px;
+  text-align: center;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.current_temp {
+  font-size: 40px;
+  min-width: 150px;
+}
+@media (max-width: 550px) .today-component-desktop .current_temp {
+  display: none;
+}
+element.style {
+}
+@media (max-width: 550px) .today-component-desktop .current_temp {
+  display: none;
+}
+@media (max-width: 550px) .current_temp {
+  margin-top: 25px;
+  width: 100%;
+  text-align: center;
+  float: none;
+  min-height: inherit;
+  padding: inherit;
+  padding-bottom: 0;
+}
+element.style {
+}
+@media (max-width: 720px) .today-component-desktop .img_section {
+  display: none;
+}
+.img_section {
+  margin-top: 15px;
+}
+@media (max-width: 720px) .today-component-desktop .img_section {
+  display: none;
+}
+.params_section {
+  color: #003ca3;
+  min-width: 135px;
+}
+@media (max-width: 1020px) .params_section {
+  display: none;
+}
+* {
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+.month-text-wrap {
+  background: #f7f9fc;
+  border-radius: 16px;
+  padding: 40px;
+}
+.section-wrap {
+  margin: 72px auto 0;
+  max-width: 960px;
+}
+div {
+  display: block;
+}
+body {
+  color: #141f2a;
+}
+@media (max-width: 992px) .section-wrap {
+  margin: 56px 6% 0;
+}
+@media (max-width: 550px) .month-text-wrap {
+  border: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+@media (max-width: 550px) .month-text-wrap {
+  border-radius: 0;
+}
+@media (max-width: 450px) .month-text-wrap {
+  padding: 24px;
+}
+h1.section-header {
+  font-size: 28px;
+}
+.section-header {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+@media (max-width: 550px) h1.section-header {
+  line-height: 38px;
+  font-size: 26px;
+}
+@media (max-width: 330px) h1.section-header {
+  font-size: 24px;
+}
+.section-sub-header {
+  color: rgba(22, 22, 22, 0.7);
+  margin-top: 4px;
+  line-height: 24px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  font-weight: 400;
+}
+@media (max-width: 550px) .section-sub-header {
+  font-size: 17px;
+}
+.text-and-bubbles {
+  display: flex;
+}
+.section-content {
+  margin-top: 28px;
+}
+@media (max-width: 983px) .text-and-bubbles {
+  display: block;
+}
+.month-text-wrap .text-wrap {
+  margin-right: 64px;
+  max-width: 540px;
+}
+@media (max-width: 983px) .month-text-wrap .text-wrap {
+  margin-right: 0;
+  max-width: inherit;
+}
+.month-text-wrap p {
+  font-size: 16px;
+  color: #615f6d;
+}
+p {
+  line-height: 30px;
+  font-size: 17px;
+  text-align: justify;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+* {
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+.today_page .month-bubbles {
+  margin-top: -64px;
+}
+.past-weather_page .month-bubbles {
+  box-shadow: 0 12px 32px rgba(0, 58, 112, 0.06);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  width: 320px;
+}
+.month-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  position: relative;
+}
+.section-header {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+}
+@media (max-width: 992px) .section-wrap {
+  margin: 56px 6% 0;
+}
+.section-header {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+}
+@media (max-width: 330px) .section-header {
+  font-size: 22px;
+}
+@media (max-width: 550px) .section-sub-header {
+  font-size: 17px;
+}
+.section-sub-header {
+  color: rgba(22, 22, 22, 0.7);
+  margin-top: 4px;
+  line-height: 24px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  font-weight: 400;
+}
+.section-content {
+  margin-top: 28px;
+}
+@media (max-width: 660px) .travel-links-section .section-content {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+.links_gallery_wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.links_gallery_wrap a {
+  width: 30%;
+  margin-bottom: 24px;
+}
+.gallery_item_wrap {
+  border-radius: 6px;
+  border: solid 1px #d4d3d3;
+  box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.13);
+}
+.gallery_item_image_wrap {
+  width: 100%;
+  height: 174px;
+  overflow: hidden;
+}
+.gallery_item_image_wrap img {
+  width: 100%;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+img {
+  vertical-align: middle;
+}
+.gallery-item-name-and-arrow {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+}
+.gallery-item-name {
+  color: #19275c;
+  font-size: 18px;
+  margin-top: 1px;
+  position: relative;
+  text-align: left;
+  flex: 1;
+  line-height: 25px;
+}
+.gallery-item-arrow {
+  width: 10px;
+  height: 10px;
+  transform: rotate(-45deg);
+  border: solid 2px #005eff;
+  border-left: 0;
+  border-top: 0;
+  margin-top: 5px;
+}
+.today_page .month-bubbles {
+  margin-top: -64px;
+}
+.past-weather_page .month-bubbles {
+  box-shadow: 0 12px 32px rgba(0, 58, 112, 0.06);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  width: 320px;
+}
+.month-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  position: relative;
+}
+@media (max-width: 980px) .today_page .month-bubbles {
+  margin-top: 34px;
+}
+.past-weather_page .month_data_line {
+  padding: 0 8px;
+}
+.month_data_line {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 50%;
+}
+.month_data_icon img {
+  max-width: 24px;
+  max-height: 24px;
+  overflow: hidden;
+}
+img {
+  vertical-align: middle;
+}
+.month_data_text {
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #4d4d5b;
+  margin-top: 16px;
+}
+.month_data_value {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+@media (max-width: 550px) .month_data_value {
+  font-size: 16px;
+}
+.degree-separator {
+  margin: 0 5px;
+}
